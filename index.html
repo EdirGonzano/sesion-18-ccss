@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sesión 18 · Aplicaciones en Ciencias de la Salud</title>
+<meta name="description" content="Matemática para las CCSS · Sesión 18 · UTP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="deck">
+
+  <header class="topbar">
+    <img class="logo" src="assets/logo-utp.png" alt="Universidad Tecnológica del Perú">
+    <nav class="moments" id="moments" aria-label="Momentos de la clase"></nav>
+    <div class="counter" id="counter">1 / 1</div>
+  </header>
+
+  <main id="stage">
+
+    <!-- ============ INICIO ============ -->
+
+    <section class="slide dark cover" data-moment="inicio" data-title="Portada">
+      <div class="wrap">
+        <div class="logo-card rise"><img src="assets/logo-utp.png" alt="Universidad Tecnológica del Perú"></div>
+        <p class="course rise">Matemática para las CCSS · Sesión 18</p>
+        <h1 class="rise">Aplicaciones en Ciencias de la Salud</h1>
+        <p class="who rise">Docente Edir Gonzano</p>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="inicio" data-title="Repaso">
+      <div class="wrap">
+        <span class="tag rise">Inicio</span>
+        <h2 class="rise">Repasemos la sesión anterior</h2>
+        <ol class="qs rise">
+          <li>¿Qué gráfico es mejor para mostrar porcentajes, como los tipos de sangre de un grupo de pacientes?</li>
+          <li>¿Para qué sirve un gráfico?</li>
+          <li>¿Qué gráfico se usa para datos agrupados por intervalos, como rangos de edad?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="inicio" data-title="Saberes previos">
+      <div class="wrap">
+        <span class="tag rise">Inicio</span>
+        <h2 class="rise">¿Qué sabes del tema de hoy?</h2>
+        <ol class="qs rise">
+          <li>¿Sabes qué es un <span class="hl">ensayo clínico</span>?</li>
+          <li>¿Has oído «grupo control» o «eficacia del tratamiento»?</li>
+          <li>¿Crees que las matemáticas son útiles para validar un tratamiento médico?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="utilidad" data-title="Utilidad">
+      <div class="wrap">
+        <span class="tag rise">Utilidad</span>
+        <p class="statement rise">Un laboratorio anuncia: <mark>«Nuestro medicamento funciona».</mark></p>
+        <h2 class="rise mt2">¿Qué datos le pedirías antes de creerle?</h2>
+        <p class="lead rise">Y en tu carrera, ¿cuándo tendrás que leer o presentar datos como estos?</p>
+      </div>
+    </section>
+
+    <section class="slide dark" data-moment="inicio" data-title="Logro de la sesión">
+      <div class="wrap">
+        <span class="tag rise">Logro de la sesión</span>
+        <p class="statement rise" style="font-size: clamp(1.7rem, calc(0.8rem + 3.3 * var(--u)), 4rem)">
+          Al finalizar la sesión, el estudiante <mark>aplica los conceptos estadísticos en estudios clínicos</mark>, resolviendo casos de salud en equipo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ TRANSFORMACIÓN ============ -->
+
+    <section class="slide divider" data-moment="transformacion" data-title="Sección Transformación">
+      <div class="wrap">
+        <div class="accent-bar rise"></div>
+        <span class="tag rise">Transformación</span>
+        <h1 class="rise">Aprendemos con datos de salud</h1>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="transformacion" data-title="Estudio clínico">
+      <div class="wrap">
+        <span class="tag rise">Datos en salud</span>
+        <h2 class="rise">Un estudio clínico responde preguntas de salud <span class="hl">con datos</span></h2>
+        <div class="grid g3 keep steps-row mt2 rise">
+          <div class="card"><div class="big">1</div><h3 class="mt">Pregunta</h3><p class="small muted">¿Este tratamiento funciona?</p></div>
+          <div class="card"><div class="big">2</div><h3 class="mt">Datos</h3><p class="small muted">Se observa y mide a los pacientes.</p></div>
+          <div class="card"><div class="big">3</div><h3 class="mt">Análisis</h3><p class="small muted">Con estadística se concluye.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="transformacion" data-title="Tipos de estudio">
+      <div class="wrap types">
+        <span class="tag rise">Tipos de estudio clínico</span>
+        <h2 class="rise">Tres formas de estudiar a los pacientes</h2>
+        <div class="grid g3 mt rise">
+          <div class="flip" tabindex="0" role="button" aria-label="Descriptivos">
+            <div class="flip-inner">
+              <div class="face front"><h3>Descriptivos</h3><p>Observan lo que ocurre.</p><span class="hintflip">Toca para ver un ejemplo</span></div>
+              <div class="face back"><span>Ejemplo</span><p>Frecuencia de una enfermedad.</p></div>
+            </div>
+          </div>
+          <div class="flip" tabindex="0" role="button" aria-label="Analíticos">
+            <div class="flip-inner">
+              <div class="face front"><h3>Analíticos</h3><p>Comparan grupos.</p><span class="hintflip">Toca para ver un ejemplo</span></div>
+              <div class="face back"><span>Ejemplo</span><p>Grupo con tratamiento vs. grupo sin tratamiento.</p></div>
+            </div>
+          </div>
+          <div class="flip" tabindex="0" role="button" aria-label="Ensayos clínicos">
+            <div class="flip-inner">
+              <div class="face front"><h3>Ensayos clínicos</h3><p>Prueban un tratamiento nuevo.</p><span class="hintflip">Toca para ver un ejemplo</span></div>
+              <div class="face back"><span>Ejemplo</span><p>Un grupo recibe el fármaco y el grupo control, no.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="transformacion" data-title="Promedios y porcentajes">
+      <div class="wrap">
+        <span class="tag rise">Resumir los resultados</span>
+        <h2 class="rise">Promedios y porcentajes resumen un estudio</h2>
+        <div class="grid g2 mt2 rise">
+          <div class="card">
+            <div class="big">75 %</div>
+            <p class="statement mt" style="font-size: var(--fs-h3)">de los pacientes mostró mejoría con vitamina D.</p>
+            <p class="small muted mt">Porcentaje = casos ÷ total × 100</p>
+          </div>
+          <div class="card">
+            <div class="big">3,2 kg</div>
+            <p class="statement mt" style="font-size: var(--fs-h3)">fue la pérdida media de peso del grupo.</p>
+            <p class="small muted mt">Media = suma de valores ÷ cantidad de valores</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="transformacion" data-title="Tamaño de muestra">
+      <div class="wrap">
+        <span class="tag rise">Tamaño de muestra</span>
+        <h2 class="rise">Más pacientes, resultados más confiables</h2>
+        <div class="mt2 rise">
+          <div class="seg" id="seg-muestra">
+            <button type="button" data-n="10" class="on">10 personas</button>
+            <button type="button" data-n="1000">1 000 personas</button>
+          </div>
+          <div class="card">
+            <div class="dots" id="dots-muestra"></div>
+            <p class="readout" id="readout-muestra"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="transformacion" data-title="Dispersión">
+      <div class="wrap">
+        <span class="tag rise">Medidas de dispersión</span>
+        <h2 class="rise">Mismo promedio, <span class="hl">historias distintas</span></h2>
+        <div class="mt rise">
+          <div class="seg" id="seg-disp">
+            <button type="button" data-k="low" class="on">Dispersión baja</button>
+            <button type="button" data-k="high">Dispersión alta</button>
+          </div>
+          <div class="chart" id="disp-chart"></div>
+          <p class="readout" id="readout-disp"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark quiz" data-moment="transformacion" data-title="Quiz 1" data-quiz="dispersion"></section>
+
+    <section class="slide" data-moment="transformacion" data-title="Qué gráfico usar">
+      <div class="wrap">
+        <span class="tag rise">Representación gráfica</span>
+        <h2 class="rise">Cada dato pide su gráfico</h2>
+        <div class="grid g3 keep charts-row mt rise">
+          <div class="card"><div class="chart" data-chart="mini-bar"></div><h3 class="mt">Barras</h3><p class="small muted">Comparar grupos.</p></div>
+          <div class="card"><div class="chart" data-chart="mini-hist"></div><h3 class="mt">Histograma</h3><p class="small muted">Datos en intervalos.</p></div>
+          <div class="card"><div class="chart" data-chart="mini-pie"></div><h3 class="mt">Pastel</h3><p class="small muted">Partes de un total.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark quiz" data-moment="transformacion" data-title="Quiz 2" data-quiz="grafico"></section>
+
+    <section class="slide" data-moment="transformacion" data-title="Caso 1: fiebre">
+      <div class="wrap">
+        <span class="tag rise">Ejemplo 1</span>
+        <h2 class="rise">¿Funcionó el medicamento contra la fiebre?</h2>
+        <div class="grid g2 mt rise">
+          <div>
+            <div class="databox">
+              <p class="intro">100 pacientes con fiebre. ¿Quiénes bajaron la fiebre en 6 horas o menos?</p>
+              <div class="row"><span>Grupo A · con medicamento</span><b>80 %</b></div>
+              <div class="row"><span>Grupo B · sin medicamento</span><b>40 %</b></div>
+            </div>
+            <ol class="qs"><li>¿Qué gráfico usarías?</li><li>¿Qué conclusión sacarías?</li></ol>
+          </div>
+          <div>
+            <div data-step="1"><div class="chart" data-chart="fever"></div></div>
+            <div data-step="2" class="answer-card mt">El medicamento fue más efectivo: el <b>80 %</b> del grupo A bajó la fiebre, frente al <b>40 %</b> del grupo B.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="transformacion" data-title="Caso 2: hemoglobina">
+      <div class="wrap">
+        <span class="tag rise">Ejemplo 2</span>
+        <h2 class="rise">¿El suplemento de hierro mejoró la hemoglobina?</h2>
+        <div class="grid g2 mt rise">
+          <div>
+            <div class="databox">
+              <p class="intro">Hemoglobina antes y 3 meses después del suplemento.</p>
+              <div class="row"><span>Antes · media / desv. est.</span><b>11,5 · 1,2</b></div>
+              <div class="row"><span>Después · media / desv. est.</span><b>13,2 · 0,8</b></div>
+            </div>
+            <ol class="qs"><li>¿Mejoraron?</li><li>¿Son más parecidos los resultados?</li></ol>
+          </div>
+          <div>
+            <div data-step="1" class="answer-card">Sí mejoraron: la media subió de 11,5 a 13,2 g/dL.</div>
+            <div data-step="2" class="answer-card mt">Sí: la desviación estándar bajó de 1,2 a 0,8, así que los pacientes quedaron más parecidos entre sí.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark" data-moment="transformacion" data-title="Espacio de preguntas">
+      <div class="wrap center">
+        <span class="tag rise">Espacio de preguntas</span>
+        <h1 class="rise">¿Tienes dudas?</h1>
+        <p class="lead rise" style="margin-left:auto;margin-right:auto">Comparte tus dudas de la sesión o de los ejemplos que acabamos de ver.</p>
+        <p class="big rise mt2" style="color:#FF6F84">5 min</p>
+      </div>
+    </section>
+
+    <!-- ============ PRÁCTICA ============ -->
+
+    <section class="slide divider" data-moment="practica" data-title="Sección Práctica">
+      <div class="wrap">
+        <div class="accent-bar rise"></div>
+        <span class="tag rise">Práctica</span>
+        <h1 class="rise">Preparados para aplicar lo aprendido</h1>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="practica" data-title="Experiencia grupal">
+      <div class="wrap">
+        <span class="tag rise">Experiencia grupal</span>
+        <h2 class="rise">Desarrollen los ejercicios en equipo</h2>
+        <div class="group-grid mt2 rise">
+          <div class="card time-card"><div class="big">30 min</div><small>Trabajo grupal</small></div>
+          <div class="group-list">
+            <div class="card"><h3>Equipos de</h3><p class="statement">4 a 5 estudiantes</p></div>
+            <div class="card"><h3>Desarrollen</h3><p class="statement">los ejercicios 1 al 4</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="practica" data-title="Ejercicio 1">
+      <div class="wrap">
+        <div class="ex-title rise"><span class="ex-num">1</span><h2>Rutina de ejercicios en adultos mayores</h2></div>
+        <div class="ex-grid rise">
+          <div class="databox">
+            <p class="intro">Un estudio evaluó el efecto de una rutina de ejercicios en 2 grupos de adultos mayores.</p>
+            <div class="row"><span>Con ejercicio · pérdida media</span><b>3,2 kg</b></div>
+            <div class="row"><span>Sin ejercicio · pérdida media</span><b>0,8 kg</b></div>
+          </div>
+          <ol class="ex-q">
+            <li>¿Qué grupo tuvo mejores resultados y por cuántos kg?</li>
+            <li>¿Qué gráfica usarías para presentar esta información? Justifica.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="practica" data-title="Ejercicio 2">
+      <div class="wrap">
+        <div class="ex-title rise"><span class="ex-num">2</span><h2>Campaña de vacunación</h2></div>
+        <div class="ex-grid rise">
+          <div class="databox">
+            <p class="intro">En una campaña de vacunación se reportó:</p>
+            <div class="row"><span>Personas vacunadas</span><b>500</b></div>
+            <div class="row"><span>Con efectos secundarios leves</span><b>15</b></div>
+          </div>
+          <ol class="ex-q">
+            <li>¿Qué porcentaje representan?</li>
+            <li>¿Cómo lo representarías gráficamente? Justifica.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="practica" data-title="Ejercicio 3">
+      <div class="wrap">
+        <div class="ex-title rise"><span class="ex-num">3</span><h2>Hidratación en dos grupos</h2></div>
+        <div class="ex-grid rise">
+          <div class="databox">
+            <p class="intro">Un estudio comparó la hidratación, medida por la cantidad de orina diaria.</p>
+            <div class="row"><span>Grupo A · 8 vasos al día</span><b>1,9 L</b></div>
+            <div class="row"><span>Grupo B · menos de 4 vasos</span><b>1,2 L</b></div>
+            <p class="intro" style="margin-top:.6rem">Valores: promedio de orina por día.</p>
+          </div>
+          <ol class="ex-q">
+            <li>¿Qué grupo muestra mejor hidratación?</li>
+            <li>¿Cuál fue el promedio más alto?</li>
+            <li>¿Qué gráfica usarías para mostrar esta comparación? ¿Por qué?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="practica" data-title="Ejercicio 4 · Datos">
+      <div class="wrap">
+        <div class="ex-title rise"><span class="ex-num">4</span><h2>Glucosa en ayunas de 40 pacientes</h2></div>
+        <p class="lead rise" style="margin:0 0 .8rem">Un hospital realiza un estudio clínico en pacientes con riesgo de diabetes tipo 2. Resultados en mg/dL:</p>
+        <div class="scrollx rise"><table class="data" id="glucose-table" aria-label="Datos de glucosa"></table></div>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="practica" data-title="Ejercicio 4 · Preguntas">
+      <div class="wrap">
+        <div class="ex-title rise"><span class="ex-num">4</span><h2>Con los 40 datos de glucosa</h2></div>
+        <ol class="ex-q rise">
+          <li>Elabore una tabla de frecuencias absolutas, relativas y acumuladas agrupando los datos.</li>
+          <li>Construya un histograma de los niveles de glucosa en sangre.</li>
+          <li>Calcule la media, mediana y moda.</li>
+          <li>Calcule el rango, varianza, desviación estándar y coeficiente de variación.</li>
+          <li>Si lo normal en ayunas es de 70 a 99 mg/dL, ¿qué concluyes sobre el estado de salud del grupo? ¿Qué recomendación darías al equipo médico?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="practica" data-title="Exposición">
+      <div class="wrap">
+        <span class="tag rise">Experiencia grupal</span>
+        <h2 class="rise">Al terminar, compartimos</h2>
+        <ol class="qs rise">
+          <li>Elijan un representante del equipo para salir a la pizarra.</li>
+          <li>Compartan una de las resoluciones obtenidas.</li>
+          <li>Cuenten el proceso y las dudas que surgieron.</li>
+          <li>Reciban feedback de sus compañeros y del docente.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CIERRE ============ -->
+
+    <section class="slide divider" data-moment="cierre" data-title="Sección Cierre">
+      <div class="wrap">
+        <div class="accent-bar rise"></div>
+        <span class="tag rise">Cierre</span>
+        <h1 class="rise">¿Cómo puede ayudarte esto en tu carrera en salud?</h1>
+      </div>
+    </section>
+
+    <section class="slide" data-moment="cierre" data-title="Ideas principales">
+      <div class="wrap">
+        <span class="tag rise">Ideas principales</span>
+        <h2 class="rise">Completa con tus palabras</h2>
+        <ol class="qs rise">
+          <li>Un estudio clínico sirve para…</li>
+          <li>La media resume al grupo y la desviación estándar me dice…</li>
+          <li>Elijo barras, histograma o pastel cuando…</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide dark quiz" data-moment="cierre" data-title="Quiz 3" data-quiz="muestra"></section>
+
+    <section class="slide dark cover" data-moment="cierre" data-title="Finalmente">
+      <div class="wrap">
+        <span class="tag rise">Finalmente</span>
+        <h1 class="rise">¡Excelente participación!</h1>
+        <p class="sub rise">Recuerda que tienes un foro para consultas en la plataforma virtual de aprendizaje. Sigue practicando.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="controls" role="group" aria-label="Controles">
+    <button id="btn-prev" type="button" aria-label="Anterior">‹</button>
+    <span class="pos" id="pos">1 / 1</span>
+    <button id="btn-next" type="button" aria-label="Siguiente">›</button>
+    <button id="btn-full" type="button" aria-label="Pantalla completa">⛶</button>
+  </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
